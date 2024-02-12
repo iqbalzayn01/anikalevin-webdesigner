@@ -2,7 +2,7 @@ import anime from "animejs/lib/anime.es.js";
 
 export const WaterDropGrid = () => {
   return (
-    <div className="dots">
+    <div className="relative grid place-content-center px-8 py-12 overflow-x-hidden">
       <DotGrid />
     </div>
   );
@@ -40,8 +40,15 @@ const DotGrid = () => {
   for (let i = 0; i < gridWidth; i++) {
     for (let j = 0; j < gridHeight; j++) {
       dots.push(
-        <div className="dot-group" data-index={index} key={`${i}-${j}`}>
-          <div className="dot-item" data-index={index} />
+        <div
+          className="group cursor-crosshair rounded-full p-[5px] transition-colors hover:bg-slate-400"
+          data-index={index}
+          key={`${i}-${j}`}
+        >
+          <div
+            className="dot-item h-[0.4rem] w-[0.4rem] rounded-full bg-gradient-to-b from-slate-500 to-white opacity-50 group-hover:from-slate-600 group-hover:to-white"
+            data-index={index}
+          />
         </div>
       );
       index++;
@@ -52,7 +59,7 @@ const DotGrid = () => {
     <div
       onClick={handleDotClick}
       style={{ gridTemplateColumns: `repeat(${gridWidth}, 1fr)` }}
-      className="dot-grid"
+      className="grid w-fit"
     >
       {dots}
     </div>

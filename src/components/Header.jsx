@@ -1,10 +1,15 @@
 export const Header = () => {
   return (
     <>
-      <header className="header">
-        <nav className="navbar">
-          <span className="logo">Anika Levin</span>
-          <button type="button" className="menus">
+      <header className="header mx-auto px-5 py-5">
+        <nav className="navbar flex items-center justify-between">
+          <span className="logo text-2xl text-white font-semibold tracking-widest uppercase z-20">
+            Anika Levin
+          </span>
+          <button
+            type="button"
+            className="flex items-center justify-between z-20"
+          >
             <svg
               width="32"
               height="32"
@@ -17,7 +22,9 @@ export const Header = () => {
                 fill="white"
               />
             </svg>
-            <span>Menu</span>
+            <span className="text-2xl text-white font-semibold tracking-widest uppercase z-20">
+              Menu
+            </span>
           </button>
         </nav>
       </header>
