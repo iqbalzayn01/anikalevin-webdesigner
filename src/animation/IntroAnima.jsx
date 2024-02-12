@@ -1,8 +1,8 @@
 import anime from "animejs/lib/anime.es.js";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 export const IntroAnima = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const subtitle = document.querySelector(".subtitle");
     const title = document.querySelector(".title");
     const photo = document.querySelector(".photo");
@@ -23,7 +23,7 @@ export const IntroAnima = () => {
         translateX: [100, 0],
         duration: 1000,
         easing: "easeOutQuad",
-        offset: "-=500",
+        offset: "-=1000",
         delay: 300,
       });
 
@@ -33,7 +33,7 @@ export const IntroAnima = () => {
       translateX: [-50, 0],
       duration: 1000,
       easing: "easeOutQuad",
-      offset: "-=500",
+      offset: "-=1000",
       delay: 300,
     });
   }, []);
