@@ -3,40 +3,38 @@ import { useEffect } from "react";
 
 export const IntroAnima = () => {
   useEffect(() => {
-    const useIntroAnima = () => {
-      const subtitle = document.querySelector(".subtitle");
-      const title = document.querySelector(".title");
-      const photo = document.querySelector(".photo");
+    const subtitle = document.querySelector(".subtitle");
+    const title = document.querySelector(".title");
+    const photo = document.querySelector(".photo");
 
-      anime
-        .timeline({ loop: false })
-        .add({
-          targets: subtitle,
-          opacity: [0, 1],
-          translateX: [-100, 0],
-          duration: 1000,
-          easing: "easeOutQuad",
-        })
-        .add({
-          targets: title,
-          opacity: [0, 1],
-          translateX: [100, 0],
-          duration: 1000,
-          easing: "easeOutQuad",
-          offset: "-=500",
-        });
-
-      anime.timeline({ loop: false }).add({
-        targets: photo,
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: subtitle,
         opacity: [0, 1],
-        translateX: [-50, 0],
+        translateX: [-100, 0],
+        duration: 1000,
+        easing: "easeOutQuad",
+        delay: 300,
+      })
+      .add({
+        targets: title,
+        opacity: [0, 1],
+        translateX: [100, 0],
         duration: 1000,
         easing: "easeOutQuad",
         offset: "-=500",
+        delay: 300,
       });
-    };
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useIntroAnima();
+    anime.timeline({ loop: false }).add({
+      targets: photo,
+      opacity: [0, 1],
+      translateX: [-50, 0],
+      duration: 1000,
+      easing: "easeOutQuad",
+      offset: "-=500",
+      delay: 300,
+    });
   }, []);
 };
