@@ -56,6 +56,10 @@ button {
 }
 
 /* Class Name */
+.header {
+  margin-bottom: 20px;
+}
+
 .header .navbar {
   display: flex;
   align-items: center;
