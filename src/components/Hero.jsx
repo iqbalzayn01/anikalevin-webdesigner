@@ -4,7 +4,7 @@ import { IntroAnima } from "../animation/IntroAnima";
 export const Hero = () => {
   IntroAnima();
   return (
-    <div className="hero relative container mx-auto px-5">
+    <div className="hero relative overflow-x-hidden container mx-auto px-5">
       <h2 className="subtitle absolute max-w-80 top-[60px] lg:top-[70px] left-[5%] lg:left-[20%] text-2xl text-white font-medium tracking-widest uppercase z-40">
         Welcome to {""}
         <b>Anika Levin</b>

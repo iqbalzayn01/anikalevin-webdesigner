@@ -10,31 +10,21 @@ export const IntroAnima = () => {
     anime
       .timeline({ loop: false })
       .add({
-        targets: subtitle,
+        targets: [subtitle, photo],
         opacity: [0, 1],
         translateX: [-100, 0],
-        duration: 1000,
-        easing: "easeOutQuad",
-        delay: 300,
+        duration: 1700,
+        easing: "easeOutExpo",
+        offset: "-=1700",
+        delay: 0,
       })
       .add({
         targets: title,
         opacity: [0, 1],
         translateX: [100, 0],
-        duration: 1000,
-        easing: "easeOutQuad",
-        offset: "-=1000",
-        delay: 300,
+        duration: 1700,
+        easing: "easeOutExpo",
+        delay: 0,
       });
-
-    anime.timeline({ loop: false }).add({
-      targets: photo,
-      opacity: [0, 1],
-      translateX: [-50, 0],
-      duration: 1000,
-      easing: "easeOutQuad",
-      offset: "-=1000",
-      delay: 300,
-    });
   }, []);
 };
